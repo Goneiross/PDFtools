@@ -15,11 +15,10 @@ print("-------------------------------------------------")
 
 for name in names :
     print ("Mot recherché :", name)
+    pages = []
     for pageIndex in range (0, len(extracted_text)) :
         if (extracted_text[pageIndex].find(name) != -1) :
-            print (pageIndex)
-        else :
-            print("false")
-            
+            pages.append(pageIndex + 1)
+    print (pages)
 f.close()
 n.close()
